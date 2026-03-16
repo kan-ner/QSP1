@@ -42,7 +42,6 @@ class TestLargeFileStreaming(unittest.TestCase):
         recovered_data = bytearray()
         reconstruct_start = time.time()
         
-        # 像水流一样一点点切出 T 个切片塞进重构器
         for chunk_idx in range(len(chunks)):
             start_offset = chunk_idx * CHUNK_SIZE
             # 计算最后一块的实际长度
